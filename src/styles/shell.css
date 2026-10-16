@@ -1,0 +1,40 @@
+body {
+  background: #fafafa;
+}
+
+.clone-shell {
+  width: min(100%, 430px);
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.clone-shell .container.blur-active {
+  filter: blur(10px);
+}
+
+.clone-shell .container.overlay-color-purple {
+  left: 50%;
+  right: auto;
+  width: min(100%, 430px);
+  max-width: 430px;
+  transform: translateX(-50%);
+}
+
+.clone-floats {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  width: min(100%, 430px);
+  height: 0;
+  transform: translateX(-50%);
+  z-index: 40;
+  pointer-events: none;
+}
+
+.clone-floats > * {
+  pointer-events: auto;
+}
+
+.drawer-clip.active .drawer-screen {
+  pointer-events: auto;
+}
