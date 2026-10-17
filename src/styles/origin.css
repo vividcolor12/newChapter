@@ -307,12 +307,13 @@ section .image-wrap img[data-v-57912525] { width: 100%; }
   object-position: center top;
 }
 
-/* Opening: 사진 크기를 화면 높이가 아니라 폭 기준(폭 x 2.3)으로 고정하고, 화면 세로 중앙에 둡니다.
+/* Opening: 사진 크기를 화면 높이가 아니라 폭 기준(폭 x 2.07)으로 고정하고, 화면 세로 중앙에 둡니다.
    화면 높이가 바뀌면(인앱 브라우저 바) 사진은 커지거나 줄지 않고 위·아래만 더 보이거나 잘립니다.
-   2.3 은 가장 긴 폰 화면(약 2.22)도 덮도록 여유를 둔 값입니다. */
+   2.07 = 2.3 x 0.9. 값을 줄이면 사진이 덜 확대(좌우가 덜 잘림)되고, 늘리면 더 확대됩니다.
+   화면 비율(높이/폭)이 이 값보다 큰 폰에서는 위·아래에 배경색 띠가 보일 수 있습니다. */
 .container .bg_div[data-v-4d187d36] { container-type: inline-size; }
 .container .bg_div > .img_01[data-v-4d187d36],
 .container .bg_div > .img_02[data-v-4d187d36] {
-  height: calc(100cqw * 2.3);
-  top: calc(50% - 100cqw * 1.15);
+  height: calc(100cqw * 2.07);
+  top: calc(50% - 100cqw * 1.035);
 }
