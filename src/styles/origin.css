@@ -293,15 +293,26 @@ section .image-wrap img[data-v-57912525] { width: 100%; }
   }
 }
 
-/* Main section: taller by 10vh than the photo's natural height.
-   --main-photo-ratio is the main photo's height / width (1000x1250 => 1.25); update it if the photo changes. */
+/* Main section: 사진 원본 높이보다 폭의 28% 만큼 더 길게.
+   화면 높이(vh)를 쓰면 인앱 브라우저의 상·하단 바 때문에 크기가 바뀌므로 폭(cqw) 기준으로만 계산합니다.
+   --main-photo-ratio 는 메인 사진의 높이/폭(1000x1250 => 1.25) 입니다. 사진을 바꾸면 수정하세요. */
 #section-main .main-img-area {
   --main-photo-ratio: 1.25;
-  --main-extra-height: 14vh;
+  --main-extra-ratio: 0.28;
   container-type: inline-size;
 }
 #section-main .main-img-area .image-wrapper .main-image {
-  height: calc(100cqw * var(--main-photo-ratio) + var(--main-extra-height));
+  height: calc(100cqw * (var(--main-photo-ratio) + var(--main-extra-ratio)));
   object-fit: cover;
   object-position: center top;
+}
+
+/* Opening: 사진 크기를 화면 높이가 아니라 폭 기준(폭 x 2.3)으로 고정하고, 화면 세로 중앙에 둡니다.
+   화면 높이가 바뀌면(인앱 브라우저 바) 사진은 커지거나 줄지 않고 위·아래만 더 보이거나 잘립니다.
+   2.3 은 가장 긴 폰 화면(약 2.22)도 덮도록 여유를 둔 값입니다. */
+.container .bg_div[data-v-4d187d36] { container-type: inline-size; }
+.container .bg_div > .img_01[data-v-4d187d36],
+.container .bg_div > .img_02[data-v-4d187d36] {
+  height: calc(100cqw * 2.3);
+  top: calc(50% - 100cqw * 1.15);
 }
