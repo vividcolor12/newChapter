@@ -5,7 +5,7 @@ body {
 .clone-shell {
   width: min(100%, 430px);
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .clone-shell .container.blur-active {

@@ -1,19 +1,13 @@
 {
   "name": "wedding",
   "version": "1.0.0",
-  "description": "Mobile wedding invitation clone",
+  "description": "getting married",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "analyze": "node scripts/analyze.mjs",
-    "inspect:dom": "node scripts/inspect-dom.mjs",
-    "generate:card": "node scripts/generate-card-data.mjs"
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "lottie-web": "^5.13.0",
     "react": "^19.2.4",
@@ -21,7 +15,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",
-    "playwright": "^1.64.1",
     "vite": "^7.3.1"
   }
 }

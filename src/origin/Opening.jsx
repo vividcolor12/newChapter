@@ -29,8 +29,8 @@ export default function Opening({ onDone }) {
       <div data-v-4d187d36="" className="opening_bg">
         <div data-v-4d187d36="" className="bg_div">
           <div data-v-4d187d36="" className="overlay-div"></div>
-          <img data-v-4d187d36="" className="img_01" src={photo('16', '?f=webp&w=1280')} alt="" />
-          <img data-v-4d187d36="" className="img_02" src={photo('04', '?f=webp&w=1280')} alt="" />
+          <img data-v-4d187d36="" className="img_01" src={photo('16')} alt="" />
+          <img data-v-4d187d36="" className="img_02" src={photo('04')} alt="" />
         </div>
       </div>
       <div data-v-4d187d36="" className="opening_text" ref={textRef}></div>

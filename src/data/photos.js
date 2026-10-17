@@ -1,30 +1,28 @@
-const SITE = 'https://vividcolor12.github.io/newChapter/photos';
-const ORIGIN = 'https://images.theirmood.com/resources/46097/card/vzUGuBO4E1';
+// 사진은 public/photos/<번호>.jpg 에 있습니다. 교체하려면 같은 이름으로 덮어쓰세요.
+const BASE = `${import.meta.env.BASE_URL}photos`;
 
-// 값을 비워두면 원본 시안 사진을 사용합니다. 우리 사진으로 바꾸려면 public/photos/ 에 넣고 SITE 주소로 적으세요.
-export const photos = {
-  '01': '',
-  '02': '', 
-  '03': '', 
-  '04': '', 
-  '05': '',
-  '06': '',
-  '07': '', 
-  '08': '',
-  '09': '', 
-  '10': '', 
-  '11': '', 
-  '12': '', 
-  '13': '', 
-  '14': '', 
-  '15': '', 
-  '16': '', 
-  '17': '', 
-  '18': '', 
-  '19': '', 
-  '20': '', 
-};
+export const photo = (id) => `${BASE}/${id}.jpg`;
 
-export function photo(id, query = '', ext = 'jpg') {
-  return photos[id] || `${SITE}/${id}.${ext}${query}`;
-}
+// 갤러리 순서(그리드에 보이는 순서). span: 가로 2칸을 차지하는 사진
+export const GALLERY = [
+  { id: '01', span: true },
+  { id: '07' },
+  { id: '04', span: true },
+  { id: '10', span: true },
+  { id: '02', span: true },
+  { id: '03', span: true },
+  { id: '06', span: true },
+  { id: '12', span: true },
+  { id: '08', span: true },
+  { id: '05', span: true },
+  { id: '11', span: true },
+  { id: '14', span: true },
+  { id: '13', span: true },
+  { id: '09' },
+  { id: '15', span: true },
+  { id: '20', span: true },
+  { id: '17' },
+  { id: '16', span: true },
+  { id: '18', span: true },
+  { id: '19' },
+];

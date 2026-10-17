@@ -19,12 +19,6 @@ export default function GalleryViewer({ images, initialIndex, onClose }) {
   onCloseRef.current = onClose;
   totalRef.current = total;
 
-  // #region agent log
-  useEffect(() => {
-    fetch('http://127.0.0.1:7745/ingest/da6d8c34-7722-40f6-b626-687107da8c65',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'8edb7f'},body:JSON.stringify({sessionId:'8edb7f',runId:'post-fix',hypothesisId:'B',location:'GalleryViewer.jsx:index',message:'viewer slide',data:{initialIndex,index,count:`${index + 1}/${total}`,src:images[index]},timestamp:Date.now()})}).catch(()=>{});
-  }, [index, initialIndex, total, images]);
-  // #endregion
-
   const settle = () => {
     if (!animatingRef.current) return;
     const dir = shiftRef.current;
