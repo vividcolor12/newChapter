@@ -2,18 +2,18 @@ import { useEffect, useRef, useState } from 'react';
 import Main from './origin/Main.jsx';
 import Intro from './origin/Intro.jsx';
 import Gallery from './origin/Gallery.jsx';
-import Account from './origin/Account.jsx';
+import Account, { ARROW_DOWN, ARROW_UP } from './origin/Account.jsx';
 import EndingV2Area from './origin/EndingV2Area.jsx';
 import GalleryViewer from './components/GalleryViewer.jsx';
 import CopyAlert from './origin/popups/CopyAlert.jsx';
 import Opening from './origin/Opening.jsx';
 import { GALLERY, photo } from './data/photos.js';
+import { ACCOUNTS, getPageKey } from './data/accounts.js';
 
 const BGM = 'https://theirmood.com/src/bgm/romantic-memories.mp3';
 
-const ARROW_DOWN = 'M10.2349 3.48486C10.3813 3.33841 10.6187 3.33841 10.7651 3.48486C10.9116 3.6313 10.9116 3.86869 10.7651 4.01513L6.26513 8.51513C6.11869 8.66157 5.8813 8.66157 5.73486 8.51513L1.23486 4.01513L1.20898 3.98656C1.08895 3.83928 1.0976 3.62211 1.23486 3.48486C1.37211 3.3476 1.58928 3.33895 1.73656 3.45898L1.76513 3.48486L5.99999 7.71972L10.2349 3.48486Z';
-const ARROW_UP = 'M5.7634 3.45897C5.91069 3.33895 6.12786 3.3476 6.26511 3.48485L10.7651 7.98485L10.791 8.01341C10.911 8.1607 10.9023 8.37787 10.7651 8.51512C10.6279 8.65237 10.4107 8.66101 10.2634 8.541L10.2348 8.51512L5.99997 4.28026L1.76511 8.51512C1.61867 8.66156 1.38128 8.66155 1.23483 8.51512C1.08839 8.36868 1.08839 8.1313 1.23483 7.98485L5.73484 3.48485L5.7634 3.45897Z';
-
+// 이 페이지(/p, /j, /z)의 계좌 정보. null 이면 계좌 섹션을 그리지 않습니다.
+const ACCOUNT_LIST = ACCOUNTS[getPageKey()];
 const GALLERY_IMAGES = GALLERY.map(({ id }) => photo(id));
 
 // data-aos 요소가 화면에 들어오면 aos-animate 클래스를 붙여 페이드인시킵니다.
@@ -152,7 +152,7 @@ export default function App() {
         <Main />
         <Intro />
         <Gallery />
-        <Account />
+        {ACCOUNT_LIST ? <Account accounts={ACCOUNT_LIST} /> : null}
         <EndingV2Area />
       </div>
 
