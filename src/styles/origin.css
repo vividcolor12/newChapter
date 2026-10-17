@@ -57,23 +57,6 @@ p { margin: 0px; }
 .ft-gowundodum { font-family: "Gowun Dodum", sans-serif; }
 .ft-gowundodum :not(.ft-gowun-bold) { -webkit-text-stroke: 0.2px; }
 .ft-gowundodum .ft-gowun-bold, .ft-gowundodum .ft-gowun-bold *, .ft-gowundodum i { -webkit-text-stroke: 0px !important; }
-.bgm-wrapper:not(.in-phone) { display: flex; justify-content: end; left: 50%; max-width: 425px; padding: 15px; position: fixed; top: 0px; transform: translateX(-50%); width: 100%; z-index: 80; }
-.bgm-wrapper .bgm-banner { align-items: flex-start; display: flex; justify-content: flex-end; padding: 0px; pointer-events: none; }
-.bgm-wrapper .bgm-banner .sound { align-items: center; background: rgba(var(--label-primary-rgb),.4); border-radius: 12px; color: inherit; cursor: pointer; display: flex; gap: 2px; height: 24px; justify-content: center; pointer-events: auto; width: 32px; z-index: 75; }
-.bgm-wrapper .bgm-banner .sound > * { animation: 1.6s ease-in-out 0s infinite normal none running soundBar; background: var(--surface-card); display: inline-flex; height: 2px; width: 2px; }
-.bgm-wrapper .bgm-banner .sound span.paused { animation-play-state: paused; height: 2px !important; }
-.bgm-wrapper .bgm-banner .sound .no-1 { animation-delay: 0s; animation-duration: 1.4s; }
-.bgm-wrapper .bgm-banner .sound .no-2 { animation-delay: 0.2s; animation-duration: 1.6s; }
-.bgm-wrapper .bgm-banner .sound .no-3 { animation-delay: 0.4s; animation-duration: 1.8s; }
-.bgm-wrapper .bgm-banner .sound .no-4 { animation-delay: 0.1s; animation-duration: 1.5s; }
-@keyframes soundBar { 
-  0% { height: 2px; }
-  20% { height: 5px; }
-  40% { height: 8px; }
-  60% { height: 3px; }
-  80% { height: 7px; }
-  100% { height: 2px; }
-}
 .container[data-v-0f70ab0a] { --bg-page: #fafafa; --label-primary: #1a1a1a; --label-primary-rgb: 26,26,26; --label-secondary: #4d4c4c; --label-tertiary: #999; --label-quaternary: #ccc; --color-emp: #f79e9e; --color-emp-btn: #404040; --color-emp-btn-icon: rgba(64,64,64,.6); --color-emp-btn-border: #eee; --surface-card: #fff; --surface-popup: var(--bg-page); --surface-inverse: #1d1d1d; --surface-inverse-text: #fff; --border-subtle: rgba(64,64,64,.16); --border-strong: rgba(64,64,64,.3); --shadow-card: 0 4px 10px rgba(0,0,0,.2); --shadow-popup: 0 12px 30px rgba(0,0,0,.2); color: var(--label-primary); display: flex; flex-direction: column; position: relative; }
 .container.theme_emp_color_purple[data-v-0f70ab0a] { --color-emp: #b27085; --color-emp-btn: #7b2934; --color-emp-btn-icon: rgba(123,41,52,.6); --color-emp-btn-border: #f0e3e3; }
 .container[data-v-0f70ab0a] * { -webkit-font-smoothing: antialiased; }
@@ -224,12 +207,16 @@ section .section-footer .introBottomDisplay .ibottom .none[data-v-244400fe] { di
 .container .inner .list-wrap .list-head .icon-wrap[data-v-74b0839a] { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); }
 .container .inner .list-wrap .item-list[data-v-74b0839a] { border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; display: flex; flex-direction: column; max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.3s, opacity 0.3s; }
 .container .inner .list-wrap .item-list.on[data-v-74b0839a] { max-height: 100rem; opacity: 1; }
-.container .inner .list-wrap .item-list .item[data-v-74b0839a] { background: var(--surface-card); display: flex; justify-content: space-between; padding: 16px; width: 100%; }
+.container .inner .list-wrap .item-list .item[data-v-74b0839a] { align-items: center; background: var(--surface-card); display: flex; gap: 12px; justify-content: space-between; padding: 16px; width: 100%; }
 .container .inner .list-wrap .item-list .item[data-v-74b0839a]:not(:last-child) { border-bottom: 1px solid rgba(var(--label-primary-rgb),.12); }
 .container .inner .list-wrap .item-list .item .info[data-v-74b0839a] { align-items: flex-start; display: flex; flex-direction: column; font-family: Pretendard; font-size: 1.4rem; gap: 4px; justify-content: flex-start; line-height: 2.2rem; }
-.container .inner .list-wrap .item-list .item .info button[data-v-74b0839a] { align-items: center; color: var(--label-primary); display: flex; flex-wrap: wrap; gap: 4px; line-height: 2.2rem; text-align: left; }
+.container .inner .list-wrap .item-list .item .info .holder[data-v-74b0839a], .container .inner .list-wrap .item-list .item .info .account[data-v-74b0839a] { align-items: center; display: flex; flex-wrap: wrap; gap: 4px; line-height: 2.2rem; text-align: left; }
+.container .inner .list-wrap .item-list .item .info .holder[data-v-74b0839a] { color: var(--label-primary); }
 .container .inner .list-wrap .item-list .item .info .account[data-v-74b0839a] { color: var(--label-secondary); }
-.container .inner .list-wrap .item-list .item .info .holder .role[data-v-74b0839a] { color: var(--label-secondary); font-size: 0.86em; }
+.container .inner .list-wrap .item-list .item .info .nmb[data-v-74b0839a] { white-space: nowrap; }
+/* 계좌번호 복사 버튼: 오른쪽에 테두리가 있는 '복사' 버튼 (어르신도 알아보기 쉽게 크고 진하게) */
+.container .inner .list-wrap .item-list .item .copy-btn[data-v-74b0839a] { background: var(--color-emp); border-radius: 8px; color: #fff; cursor: pointer; flex-shrink: 0; font-family: inherit; font-size: 15px; line-height: 1; min-height: 40px; padding: 0px 16px; }
+.container .inner .list-wrap .item-list .item .copy-btn[data-v-74b0839a]:active { filter: brightness(120%); }
 section[data-v-a76b5a42] { align-items: center; display: flex; flex-direction: column; gap: 32px; justify-content: center; padding: 60px 0px; }
 section.ft-gowundodum[data-v-a76b5a42] { font-family: "Gowun Dodum", sans-serif; }
 section.ft-gowundodum[data-v-a76b5a42] :not(.ft-gowun-bold) { -webkit-text-stroke: 0.02rem; }

@@ -10,8 +10,6 @@ import Opening from './origin/Opening.jsx';
 import { GALLERY, photo } from './data/photos.js';
 import { ACCOUNTS, getPageKey } from './data/accounts.js';
 
-const BGM = 'https://theirmood.com/src/bgm/romantic-memories.mp3';
-
 // 이 페이지(/p, /j, /z)의 계좌 정보. null 이면 계좌 섹션을 그리지 않습니다.
 const ACCOUNT_LIST = ACCOUNTS[getPageKey()];
 const GALLERY_IMAGES = GALLERY.map(({ id }) => photo(id));
@@ -67,28 +65,37 @@ function useAos(rootRef) {
 
 export default function App() {
   const rootRef = useRef(null);
-  const audioRef = useRef(null);
   const [viewerIndex, setViewerIndex] = useState(null);
   const [copyOpen, setCopyOpen] = useState(false);
   const [opening, setOpening] = useState(true);
-  const [playing, setPlaying] = useState(false);
   useAos(rootRef);
 
-  const toggleAudio = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (audio.paused) {
-      audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-    } else {
-      audio.pause();
-      setPlaying(false);
-    }
-  };
+  // 오프닝 애니메이션이 끝날 때까지 페이지 스크롤을 막습니다.
+  useEffect(() => {
+    if (!opening) return undefined;
+    const html = document.documentElement;
+    const body = document.body;
+    const prevHtml = html.style.overflow;
+    const prevBody = body.style.overflow;
+    html.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
+    window.scrollTo(0, 0);
 
-  const finishOpening = () => {
-    setOpening(false);
-    audioRef.current?.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-  };
+    const stop = (e) => e.preventDefault();
+    const stopKey = (e) => {
+      if ([' ', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End'].includes(e.key)) e.preventDefault();
+    };
+    document.addEventListener('touchmove', stop, { passive: false });
+    document.addEventListener('wheel', stop, { passive: false });
+    document.addEventListener('keydown', stopKey);
+    return () => {
+      html.style.overflow = prevHtml;
+      body.style.overflow = prevBody;
+      document.removeEventListener('touchmove', stop);
+      document.removeEventListener('wheel', stop);
+      document.removeEventListener('keydown', stopKey);
+    };
+  }, [opening]);
 
   useEffect(() => {
     if (!copyOpen) return undefined;
@@ -118,31 +125,18 @@ export default function App() {
     }
 
     // 계좌번호 복사
-    const copyBtn = t.closest('#section-account .holder, #section-account .account');
+    const copyBtn = t.closest('#section-account .copy-btn');
     if (copyBtn) {
       const li = copyBtn.closest('.item');
       const text = `${li.querySelector('.bnk').textContent} ${li.querySelector('.nmb').textContent}`;
       navigator.clipboard?.writeText(text).catch(() => {});
       setCopyOpen(true);
-      return;
     }
-
-    if (t.closest('.sound')) toggleAudio();
   };
 
   return (
     <div className="clone-shell" onClick={handleClick}>
-      {opening ? <Opening onDone={finishOpening} /> : null}
-      <audio ref={audioRef} src={BGM} loop />
-      <div className="bgm-wrapper bg_theme_white">
-        <div className="bgm-banner">
-          <button type="button" className="sound" aria-label="배경음악">
-            {['no-1', 'no-2', 'no-3', 'no-4'].map((name) => (
-              <span key={name} className={playing ? name : `${name} paused`} />
-            ))}
-          </button>
-        </div>
-      </div>
+      {opening ? <Opening onDone={() => setOpening(false)} /> : null}
       <div
         ref={rootRef}
         data-v-0f70ab0a=""
