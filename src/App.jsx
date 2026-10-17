@@ -8,10 +8,13 @@ import GalleryViewer from './components/GalleryViewer.jsx';
 import CopyAlert from './origin/popups/CopyAlert.jsx';
 import Opening from './origin/Opening.jsx';
 import { GALLERY, photo } from './data/photos.js';
-import { ACCOUNTS, getPageKey } from './data/accounts.js';
+import { ACCOUNTS, DEFAULT_PAGE, getPageKey } from './data/accounts.js';
 
 // 이 페이지(/p, /j, /z)의 계좌 정보. null 이면 계좌 섹션을 그리지 않습니다.
-const ACCOUNT_LIST = ACCOUNTS[getPageKey()];
+const PAGE_KEY = getPageKey();
+const ACCOUNT_LIST = ACCOUNTS[PAGE_KEY];
+// 기본 페이지(z)에서는 인트로의 부모님 이름(.section-footer)도 생략합니다.
+const SHOW_INTRO_FOOTER = PAGE_KEY !== DEFAULT_PAGE;
 const GALLERY_IMAGES = GALLERY.map(({ id }) => photo(id));
 
 // data-aos 요소가 화면에 들어오면 aos-animate 클래스를 붙여 페이드인시킵니다.
@@ -144,7 +147,7 @@ export default function App() {
         className={`container bg_theme_white theme_emp_color_purple ft-gowundodum bg_pattern_small_flower${viewerIndex !== null ? ' blur-active' : ''}`}
       >
         <Main />
-        <Intro />
+        <Intro showFooter={SHOW_INTRO_FOOTER} />
         <Gallery />
         {ACCOUNT_LIST ? <Account accounts={ACCOUNT_LIST} /> : null}
         <EndingV2Area />

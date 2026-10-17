@@ -1,4 +1,4 @@
-export default function Intro() {
+export default function Intro({ showFooter = true }) {
   return (
     <div data-v-0f70ab0a="" id="section-intro">
       <section data-v-244400fe="" data-v-0f70ab0a="" className="ft-gowundodum">
@@ -24,97 +24,99 @@ export default function Intro() {
             </p>
           </div>
         </div>
-        <div data-v-244400fe="" data-aos="fade-up" className="section-footer aos-init">
-          <div data-v-244400fe="" className="division-line" />
-          <div data-v-244400fe="" className="introBottomDisplay">
-            <div data-v-244400fe="" className="ibottom grid ko">
-              <div data-v-244400fe="" className="cx">
-                <div data-v-244400fe="" className="wrap">
-                  <div data-v-244400fe="" className="n_wrap">
-                    <span data-v-244400fe="" className="n">
-                    {'🌿'}
-                    <span data-v-244400fe="" className="on">
-                        <span data-v-244400fe="">
-                          {"이희춘"}
-                        </span>
-                      </span>
-                    </span>
-                    <span data-v-244400fe="" className="n_baptismal none" />
-                  </div>
-                  <div data-v-244400fe="" className="dot">
-                    {"·"}
-                  </div>
-                  <div data-v-244400fe="" className="n_wrap">
-                    <span data-v-244400fe="" className="n">
+        {showFooter ? (
+          <div data-v-244400fe="" data-aos="fade-up" className="section-footer aos-init">
+            <div data-v-244400fe="" className="division-line" />
+            <div data-v-244400fe="" className="introBottomDisplay">
+              <div data-v-244400fe="" className="ibottom grid ko">
+                <div data-v-244400fe="" className="cx">
+                  <div data-v-244400fe="" className="wrap">
+                    <div data-v-244400fe="" className="n_wrap">
+                      <span data-v-244400fe="" className="n">
+                      {'🌿'}
                       <span data-v-244400fe="" className="on">
-                        <span data-v-244400fe="">
-                          {"방심결"}
+                          <span data-v-244400fe="">
+                            {"이희춘"}
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span data-v-244400fe="" className="n_baptismal none" />
-                  </div>
-                  <div data-v-244400fe="" className="parentOf">
-                    {"의"}
-                  </div>
-                  <div data-v-244400fe="" className="order">
-                    {"아들"}
-                  </div>
-                  <div data-v-244400fe="" className="n_wrap maleName">
-                    <span data-v-244400fe="" className="n">
-                      <span data-v-244400fe="" className="on">
-                        <span data-v-244400fe="">
-                          {"이남용"}
+                      <span data-v-244400fe="" className="n_baptismal none" />
+                    </div>
+                    <div data-v-244400fe="" className="dot">
+                      {"·"}
+                    </div>
+                    <div data-v-244400fe="" className="n_wrap">
+                      <span data-v-244400fe="" className="n">
+                        <span data-v-244400fe="" className="on">
+                          <span data-v-244400fe="">
+                            {"방심결"}
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span data-v-244400fe="" className="n_baptismal none" />
-                  </div>
-                  <div data-v-244400fe="" className="n_wrap">
-                    <span data-v-244400fe="" className="n">
-                    {'🌿'}
-                      <span data-v-244400fe="" className="on">
-                        <span data-v-244400fe="">
-                          {"조만행"}
+                      <span data-v-244400fe="" className="n_baptismal none" />
+                    </div>
+                    <div data-v-244400fe="" className="parentOf">
+                      {"의"}
+                    </div>
+                    <div data-v-244400fe="" className="order">
+                      {"아들"}
+                    </div>
+                    <div data-v-244400fe="" className="n_wrap maleName">
+                      <span data-v-244400fe="" className="n">
+                        <span data-v-244400fe="" className="on">
+                          <span data-v-244400fe="">
+                            {"이남용"}
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span data-v-244400fe="" className="n_baptismal none" />
-                  </div>
-                  <div data-v-244400fe="" className="dot">
-                    {"·"}
-                  </div>
-                  <div data-v-244400fe="" className="n_wrap">
-                    <span data-v-244400fe="" className="n">
-                      <span data-v-244400fe="" className="on">
-                        <span data-v-244400fe="">
-                          {"박소현"}
+                      <span data-v-244400fe="" className="n_baptismal none" />
+                    </div>
+                    <div data-v-244400fe="" className="n_wrap">
+                      <span data-v-244400fe="" className="n">
+                      {'🌿'}
+                        <span data-v-244400fe="" className="on">
+                          <span data-v-244400fe="">
+                            {"조만행"}
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span data-v-244400fe="" className="n_baptismal none" />
-                  </div>
-                  <div data-v-244400fe="" className="parentOf">
-                    {"의"}
-                  </div>
-                  <div data-v-244400fe="" className="order">
-                    {"딸"}
-                  </div>
-                  <div data-v-244400fe="" className="n_wrap femaleName">
-                    <span data-v-244400fe="" className="n">
-                      <span data-v-244400fe="" className="on">
-                        <span data-v-244400fe="">
-                          {"조아라"}
+                      <span data-v-244400fe="" className="n_baptismal none" />
+                    </div>
+                    <div data-v-244400fe="" className="dot">
+                      {"·"}
+                    </div>
+                    <div data-v-244400fe="" className="n_wrap">
+                      <span data-v-244400fe="" className="n">
+                        <span data-v-244400fe="" className="on">
+                          <span data-v-244400fe="">
+                            {"박소현"}
+                          </span>
                         </span>
                       </span>
-                    </span>
-                    <span data-v-244400fe="" className="n_baptismal none" />
+                      <span data-v-244400fe="" className="n_baptismal none" />
+                    </div>
+                    <div data-v-244400fe="" className="parentOf">
+                      {"의"}
+                    </div>
+                    <div data-v-244400fe="" className="order">
+                      {"딸"}
+                    </div>
+                    <div data-v-244400fe="" className="n_wrap femaleName">
+                      <span data-v-244400fe="" className="n">
+                        <span data-v-244400fe="" className="on">
+                          <span data-v-244400fe="">
+                            {"조아라"}
+                          </span>
+                        </span>
+                      </span>
+                      <span data-v-244400fe="" className="n_baptismal none" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : null}
       </section>
     </div>
   );

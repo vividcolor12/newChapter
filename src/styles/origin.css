@@ -67,7 +67,7 @@ p { margin: 0px; }
 .container.ft-gowundodum[data-v-0f70ab0a] { font-family: "Gowun Dodum", sans-serif; }
 .container.ft-gowundodum[data-v-0f70ab0a] :not(.ft-gowun-bold) { -webkit-text-stroke: 0.2px; }
 .container.ft-gowundodum[data-v-0f70ab0a] .ft-gowun-bold *, .container.ft-gowundodum[data-v-0f70ab0a] .ft-gowun-bold, .container.ft-gowundodum[data-v-0f70ab0a] i { -webkit-text-stroke: 0px !important; }
-.ending-v2-area[data-v-0f70ab0a] { position: relative; }
+.ending-v2-area[data-v-0f70ab0a] { position: relative; padding-top: 40px;}
 [data-aos][data-aos][data-aos-delay="100"], body[data-aos-delay="100"] [data-aos] { }
 [data-aos][data-aos][data-aos-delay="100"].aos-animate, body[data-aos-delay="100"] [data-aos].aos-animate { transition-delay: 0.1s; }
 [data-aos^="fade"][data-aos^="fade"] { opacity: 0; transition-property: opacity, transform; }
