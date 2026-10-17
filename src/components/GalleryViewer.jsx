@@ -178,28 +178,28 @@ export default function GalleryViewer({ images, initialIndex, onClose }) {
                 ))}
               </div>
             </div>
-          </div>
-          <div className="func-wrap">
-            <div className="swiper-button-prev" onClick={() => commitShift(-1)} role="button" aria-label="이전 사진">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <button type="button" className="nav-btn prev" onClick={() => commitShift(-1)} aria-label="이전 사진">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M14.5303 5.46967C14.8232 5.76256 14.8232 6.23744 14.5303 6.53033L9.06066 12L14.5303 17.4697C14.8232 17.7626 14.8232 18.2374 14.5303 18.5303C14.2374 18.8232 13.7626 18.8232 13.4697 18.5303L7.46967 12.5303C7.17678 12.2374 7.17678 11.7626 7.46967 11.4697L13.4697 5.46967C13.7626 5.17678 14.2374 5.17678 14.5303 5.46967Z"
                   fill="#1a1a1a"
                 />
               </svg>
-            </div>
-            <div className="count">
-              <span>{index + 1}</span>
-              <span>/</span>
-              <span>{total}</span>
-            </div>
-            <div className="swiper-button-next" onClick={() => commitShift(1)} role="button" aria-label="다음 사진">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            </button>
+            <button type="button" className="nav-btn next" onClick={() => commitShift(1)} aria-label="다음 사진">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967L15.5303 11.4697C15.8232 11.7626 15.8232 12.2374 15.5303 12.5303L9.53033 18.5303C9.23744 18.8232 8.76256 18.8232 8.46967 18.5303C8.17678 18.2374 8.17678 17.7626 8.46967 17.4697L13.9393 12L8.46967 6.53033C8.17678 6.23744 8.17678 5.76256 8.46967 5.46967Z"
                   fill="#1a1a1a"
                 />
               </svg>
+            </button>
+          </div>
+          <div className="func-wrap">
+            <div className="count">
+              <span>{index + 1}</span>
+              <span>/</span>
+              <span>{total}</span>
             </div>
           </div>
         </div>
