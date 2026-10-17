@@ -63,7 +63,7 @@ const card = {
     image: c.mainScreen.imagePath[0],
   },
   invitation: {
-    title: 'INVITATION',
+    title: 'Message',
     subtitle: c.introMent.title,
     body: stripHtml(c.introMent.description),
   },

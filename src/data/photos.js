@@ -1,10 +1,10 @@
-const ORIGIN = 'https://images.theirmood.com/resources/46097/card/vzUGuBO4E1';
+const ORIGIN = 'https://vividcolor12.github.io/newChapter/photos/';
 
 // 값을 비워두면 원본 시안 사진을 사용합니다. 우리 사진으로 바꾸려면 public/photos/ 에 넣고 '/photos/파일명.jpg' 처럼 적으세요.
 export const photos = {
-  PgLLadCeRE: '', // 메인(첫 화면)
-  CiyjEVyacK: '', // 프로필 - 신랑
-  e6U2i5Bt7l: '', // 프로필 - 신부
+  PgLLadCeRE: `${ORIGIN}/01.jpg`, // 메인(첫 화면)
+  CiyjEVyacK: `${ORIGIN}/13.jpg`, // 프로필 - 신랑
+  e6U2i5Bt7l: `${ORIGIN}/14.jpg`, // 프로필 - 신부
   SQEVmW0fNC: '', // 타임라인 1
   lNeALNHrNJ: '', // 타임라인 2
   lGyYyv12A2: '', // 중간 배너 (JOIN US)
