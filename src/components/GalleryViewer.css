@@ -74,7 +74,8 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  touch-action: pan-y;
+  touch-action: none;
+  cursor: grab;
 }
 
 .gallery-viewer .swiper-wrapper {
@@ -132,6 +133,7 @@
   color: #1a1a1a;
   font-size: 14px;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .gallery-viewer .func-wrap .count {
@@ -151,6 +153,7 @@
   height: 20px;
   margin-top: 0 !important;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .gallery-viewer .func-wrap .swiper-button-prev::after,

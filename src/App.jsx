@@ -1,25 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Main from './origin/Main.jsx';
 import Intro from './origin/Intro.jsx';
-import Profile from './origin/Profile.jsx';
-import Video from './origin/Video.jsx';
-import Calendar from './origin/Calendar.jsx';
-import Together from './origin/Together.jsx';
-import Timeline from './origin/Timeline.jsx';
-import Interview from './origin/Interview.jsx';
-import MiddleImage1 from './origin/MiddleImage1.jsx';
-import Location from './origin/Location.jsx';
-import Notice1 from './origin/Notice1.jsx';
 import Gallery from './origin/Gallery.jsx';
-import Guestbook from './origin/Guestbook.jsx';
 import Account from './origin/Account.jsx';
-import Rsvp from './origin/Rsvp.jsx';
-import Snap from './origin/Snap.jsx';
-import Flower from './origin/Flower.jsx';
-import MiddleImage2 from './origin/MiddleImage2.jsx';
-import MiddleImage3 from './origin/MiddleImage3.jsx';
-import MiddleImage4 from './origin/MiddleImage4.jsx';
-import MiddleImage5 from './origin/MiddleImage5.jsx';
 import EndingV2Area from './origin/EndingV2Area.jsx';
 import GalleryViewer from './components/GalleryViewer.jsx';
 import ContactPopup from './origin/popups/ContactPopup.jsx';
@@ -47,31 +30,6 @@ const POPUPS = {
 
 const BGM = 'https://theirmood.com/src/bgm/romantic-memories.mp3';
 
-const NAVI_LINKS = {
-  네이버지도: 'navermaps://?menu=location&pinType=place&lat=37.5222644&lng=127.0390162&title=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C%20757',
-  티맵: 'tmap://route?goalx=127.0390162&goaly=37.5222644&goalname=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%84%A0%EB%A6%89%EB%A1%9C%20757',
-};
-
-const MENU_SECTIONS = {
-  인사말: 'section-intro',
-  '신랑/신부 프로필': 'section-profile',
-  '달력, 디데이': 'section-calendar',
-  '함께한 시간': 'section-together',
-  타임라인: 'section-timeline',
-  인터뷰: 'section-interview',
-  '중간 디자인 1': 'section-middle-image1',
-  '오시는 길, 교통수단': 'section-location',
-  '포토부스 이용안내': 'section-notice1',
-  갤러리: 'section-gallery',
-  방명록: 'section-guestbook',
-  '마음전하실 곳': 'section-account',
-  참석의사: 'section-rsvp',
-  '축하 사진 공유': 'section-snap',
-  '중간 디자인 2': 'section-middle-image2',
-  '중간 디자인 3': 'section-middle-image3',
-  '중간 디자인 4': 'section-middle-image4',
-};
-
 const POPUP_TRIGGERS = [
   ['#section-intro button', 'contact'],
   ['.interview-open-btn', 'interview'],
@@ -97,8 +55,9 @@ const dbg = (message, data) => fetch('http://127.0.0.1:7745/ingest/da6d8c34-7722
 // #endregion
 
 const GALLERY_IDS = [
-  'mRXE6cy9D1', 'uoROFzOsTT', 'GSCWyFMnxv', 'dOQT7LerCJ', 'kYLpP444zT', 'eXlFWiyhnn', 'l1RNEDwHZz',
-  '5h4Yk5Kx4l', '3GKEVh4Sbl', 'RYGkCtMtSk', 'cA3DIg46kw', 'OVAvqns4nX', 'NGkpHR24wP', 'IcUPCg5PRX',
+  '01', '07', '04', '10', '02', '03', '06',
+  '12', '08', '05', '11', '14', '13', '09',
+  '15', '20', '17', '16', '18', '19',
 ];
 
 const slots = {
@@ -107,7 +66,7 @@ const slots = {
 
 function useAos(rootRef) {
   useEffect(() => {
-    const els = rootRef.current.querySelectorAll('[data-aos]');
+    const root = rootRef.current;
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -119,8 +78,37 @@ function useAos(rootRef) {
       },
       { rootMargin: '0px 0px -10% 0px' },
     );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    const seen = new WeakSet();
+    const observe = (el) => {
+      if (seen.has(el) || el.classList.contains('aos-animate')) return;
+      seen.add(el);
+      io.observe(el);
+    };
+    const scan = (node) => {
+      if (node.nodeType !== 1) return;
+      if (node.hasAttribute('data-aos')) observe(node);
+      node.querySelectorAll('[data-aos]').forEach(observe);
+    };
+    scan(root);
+
+    // Elements rendered later (or given data-aos later, e.g. on hot reload) must be observed too,
+    // otherwise they stay at opacity: 0 forever.
+    const mo = new MutationObserver((mutations) => {
+      mutations.forEach((m) => {
+        if (m.type === 'attributes') scan(m.target);
+        else m.addedNodes.forEach(scan);
+      });
+    });
+    mo.observe(root, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['data-aos'],
+    });
+    return () => {
+      mo.disconnect();
+      io.disconnect();
+    };
   }, [rootRef]);
 }
 
@@ -208,10 +196,6 @@ export default function App() {
       return;
     }
 
-    if (t.closest('#section-guestbook .remove')) {
-      window.alert('샘플 청첩장에는 방명록 삭제가 불가능합니다.');
-      return;
-    }
 
     if (t.closest('.sound')) {
       toggleAudio();
@@ -228,29 +212,6 @@ export default function App() {
       return;
     }
 
-    if (t.closest('.drawer-close')) {
-      setMenuOpen(false);
-      return;
-    }
-
-    const sectionItem = t.closest('.section-item');
-    if (sectionItem) {
-      const id = MENU_SECTIONS[sectionItem.textContent.trim()];
-      if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
-      return;
-    }
-
-    const actionItem = t.closest('.action-item');
-    if (actionItem) {
-      const label = actionItem.textContent.trim();
-      if (label === '참석의사 전달하기') setPopup('rsvp');
-      if (label === '축하 사진 공유 하기') document.getElementById('section-snap')?.scrollIntoView({ behavior: 'smooth' });
-      if (label === '축하화환 보내기') setPopup('flower');
-      setMenuOpen(false);
-      return;
-    }
-
     const tabItem = t.closest('.tab-item');
     if (tabItem) {
       const label = tabItem.textContent.replace(/\s+/g, '');
@@ -260,14 +221,6 @@ export default function App() {
       }
       if (label.includes('카카오톡')) window.open('https://sharer.kakao.com/picker/link');
       setMenuOpen(false);
-      return;
-    }
-
-    const navi = t.closest('.navi_button_wrap > button');
-    if (navi) {
-      const label = navi.textContent.trim();
-      window.alert('앱이 설치되어 있지 않은 경우 길 안내가 실행되지 않을 수 있습니다');
-      if (NAVI_LINKS[label]) window.location.assign(NAVI_LINKS[label]);
       return;
     }
 
@@ -306,7 +259,6 @@ export default function App() {
         <Intro />
         <Gallery />
         <Account />
-        <Snap />
         <EndingV2Area />
       </div>
 

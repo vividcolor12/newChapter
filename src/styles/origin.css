@@ -3354,14 +3354,14 @@ p { margin: 0px; }
 .container[data-v-4d187d36] .opening_text svg { inset: 0px; margin: auto; max-width: 600px; position: absolute; height: auto !important; width: 100% !important; }
 .container .bg_div[data-v-4d187d36] { background: rgb(249, 244, 238); inset: 0px; height: 100%; margin: auto; opacity: 1; overflow: hidden; position: relative; width: 100%; }
 .container .bg_div > img[data-v-4d187d36] { left: 0px; margin: auto; object-fit: cover; object-position: center center; position: absolute; right: 0px; top: 0px; }
-.container .bg_div > .img_01[data-v-4d187d36] { height: 100%; opacity: 1; transform: translateX(0px); width: 120%; z-index: 2; }
-.container .bg_div > .img_02[data-v-4d187d36] { height: 100%; opacity: 1; transform: scale(1); width: 100%; z-index: 1; }
+.container .bg_div > .img_02[data-v-4d187d36] { height: 100%; opacity: 1; transform: translateX(0px); width: 120%; z-index: 2; }
+.container .bg_div > .img_01[data-v-4d187d36] { height: 100%; opacity: 1; transform: scale(1); width: 100%; z-index: 1; }
 .container .overlay-div[data-v-4d187d36] { background: rgb(249, 244, 238); inset: 0px; height: 100%; margin: auto; opacity: 0.4; position: absolute; width: 100%; z-index: 11; }
 .container.keys .bg_div[data-v-4d187d36] { animation: 5s linear 0s 1 normal forwards running op2_whole_wrap-4d187d36; }
 .container.keys .overlay-div[data-v-4d187d36] { animation: 5s linear 0s 1 normal forwards running op2_overlay-4d187d36; }
-.container.keys .bg_div > .img_01[data-v-4d187d36] { animation: 2s linear 0s 1 normal forwards running op2_move_x-4d187d36, 5s linear 0s 1 normal forwards running op2_move_x_img-4d187d36; }
-.container.keys .bg_div > .img_02[data-v-4d187d36] { animation: 5s linear 0s 1 normal forwards running op2_scale_up_img-4d187d36, 5s linear 0s 1 normal forwards running op2_scale_up-4d187d36; }
-.container.overlay-color-purple .bg_div[data-v-4d187d36], .container.overlay-color-purple .overlay-div[data-v-4d187d36] { background-color: rgb(56, 44, 48) !important; }
+.container.keys .bg_div > .img_02[data-v-4d187d36] { animation: 2s linear 0s 1 normal forwards running op2_move_x-4d187d36, 5s linear 0s 1 normal forwards running op2_move_x_img-4d187d36; }
+.container.keys .bg_div > .img_01[data-v-4d187d36] { animation: 5s linear 0s 1 normal forwards running op2_scale_up_img-4d187d36, 5s linear 0s 1 normal forwards running op2_scale_up-4d187d36; }
+.container.overlay-color-purple .bg_div[data-v-4d187d36], .container.overlay-color-purple .overlay-div[data-v-4d187d36] { background-color: rgb(255, 242, 231) !important; }
 @keyframes op2_move_x-4d187d36 { 
   0% { transform: translateX(0px); }
   100% { transform: translateX(-10%); }
@@ -4336,7 +4336,7 @@ button.swiper-pagination-bullet { appearance: none; border-width: medium; border
 .gallLayerWrapper.is-capture .moreBtnWrap[data-v-71ec9210] { display: none !important; }
 .gallGridWrapper[data-v-71ec9210] { display: grid; gap: 8px; grid-template-columns: repeat(3, 1fr); overflow: hidden; padding: 5px 20px; transition: height 1s ease-in-out; }
 .gallGridWrapper.twoRow[data-v-71ec9210] { gap: 8px; grid-template-columns: repeat(2, 1fr); padding: 5px 20px; }
-.gallGridWrapper .item[data-v-71ec9210] { aspect-ratio: 1 / 1; background-color: var(--border-subtle); background-position: 50% center; background-repeat: no-repeat; background-size: cover; border-radius: 4px; cursor: pointer; user-select: none; }
+.gallGridWrapper .item[data-v-71ec9210] { aspect-ratio: 1 / 1; background-color: var(--border-subtle); background-position: 50% top; background-repeat: no-repeat; background-size: cover; border-radius: 4px; cursor: pointer; user-select: none; }
 .gallGridWrapper.ratio .item[data-v-71ec9210] { aspect-ratio: 10 / 13; }
 .gallGridWrapper.multiple[data-v-71ec9210] { gap: 8px; grid-auto-rows: 9.425rem; grid-template-columns: repeat(3, 1fr); }
 .gallGridWrapper.multiple .item[data-v-71ec9210] { aspect-ratio: unset !important; height: 100%; }
@@ -4436,8 +4436,8 @@ section.ft-twindround[data-v-6fea5739] { font-family: TmoneyRoundWind, "Noto Ser
 section.ft-yeonsung[data-v-6fea5739] { font-family: "Yeon Sung", cursive; }
 section.ft-notosans[data-v-6fea5739] { font-family: "Noto Sans KR", sans-serif; }
 section .description[data-v-6fea5739] { color: var(--label-secondary); font-size: 1.4rem; line-height: 2.5rem; text-align: center; white-space: pre-wrap; }
-.share-kakao-wrap[data-v-a8de3cd4] { color: var(--label-primary); padding: 30px 0px 60px; position: relative; text-align: center; z-index: 10; }
-.share-kakao-wrap .kkt-share[data-v-a8de3cd4] { background-image: url("https://theirmood.com/src/img/icon-kakaotalk.svg"); background-position: 0px center; background-repeat: no-repeat; background-size: auto 1.6rem; cursor: pointer; display: inline-block; font-size: 1.3rem; letter-spacing: -0.05rem; padding-left: 20px; text-align: center; }
+.closing[data-v-a8de3cd4] { color: var(--label-primary); padding: 30px 0px 60px; position: relative; text-align: center; z-index: 10; }
+.closing .kkt-share[data-v-a8de3cd4] { background-image: url("https://theirmood.com/src/img/icon-kakaotalk.svg"); background-position: 0px center; background-repeat: no-repeat; background-size: auto 1.6rem; cursor: pointer; display: inline-block; font-size: 1.3rem; letter-spacing: -0.05rem; padding-left: 20px; text-align: center; }
 .card-bottom-copyright[data-v-a8de3cd4] { color: var(--label-quaternary); font-family: "Noto Serif KR", serif; font-size: 1rem; font-weight: 200; letter-spacing: -0.1rem; line-height: 1rem; margin: 20px 0px; text-align: center; }
 .bg_theme_dark .card-bottom-copyright[data-v-a8de3cd4] { color: var(--label-tertiary); }
 .card-bottom-copyright img[data-v-a8de3cd4] { height: 1rem; margin: 0px 3px; opacity: 0.3; vertical-align: bottom; }
@@ -5901,3 +5901,37 @@ section .func-wrap .swiper-button-next[data-v-f266128e]::after, section .func-wr
 .info-text[data-v-410de070] { font-weight: 400; text-align: center; }
 .info-text[data-v-410de070], .send-btn[data-v-410de070] { color: var(--label-primary); font-size: 14px; line-height: 22px; }
 .send-btn[data-v-410de070] { align-items: center; background: none; border: 1px solid var(--label-primary); border-radius: 8px; cursor: pointer; display: flex; font-family: "Pretendard Variable", Pretendard, sans-serif; font-weight: 500; justify-content: center; max-width: 100%; min-height: 52px; padding: 0px 24px; width: 321px; }
+
+/* Scroll fade-in: the AOS stylesheet had no duration/easing, so elements popped in instantly. */
+[data-aos][data-aos] {
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+[data-aos^="fade"][data-aos^="fade"] {
+  will-change: opacity, transform;
+}
+[data-aos^="fade"][data-aos^="fade"].aos-animate {
+  will-change: auto;
+}
+[data-aos="fade-up"] {
+  transform: translate3d(0px, 24px, 0px);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-aos][data-aos] {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}
+
+/* Main section: taller by 10vh than the photo's natural height.
+   --main-photo-ratio is the main photo's height / width (1000x1250 => 1.25); update it if the photo changes. */
+#section-main .main-img-area {
+  --main-photo-ratio: 1.25;
+  --main-extra-height: 14vh;
+  container-type: inline-size;
+}
+#section-main .main-img-area .image-wrapper .main-image {
+  height: calc(100cqw * var(--main-photo-ratio) + var(--main-extra-height));
+  object-fit: cover;
+  object-position: center top;
+}

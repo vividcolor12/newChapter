@@ -13,8 +13,8 @@ export default function Account({ slots = {} }) {
               {"마음 전하실 곳"}
             </div>
           </div>
-          <div data-v-a76b5a42="" className="description">
-            {"참석이 어려우신 분들을 위해\n계좌번호를 기재하였습니다.\n너그러운 마음으로 양해 부탁드립니다."}
+          <div data-v-a76b5a42="" className="description aos-init" data-aos="fade-up" data-aos-delay="100">
+            {"축하의 마음을 전하고 싶으신 분들을 위해"}
           </div>
         </div>
         <div data-v-74b0839a="" data-v-a76b5a42="" className="container aos-init" data-aos="fade-up">
@@ -47,16 +47,9 @@ export default function Account({ slots = {} }) {
                         {"신한은행"}
                       </span>
                       <span data-v-74b0839a="" className="nmb">
-                        {"110-000-000000"}
+                        {"110-377-375862"}
                       </span>
                     </button>
-                  </div>
-                  <div data-v-74b0839a="" className="btn-wrap">
-                    <a data-v-74b0839a="" className="kakaopay" target="_blank" rel="noreferrer" href="https://qr.kakaopay.com/281006011000000310267128">
-                      <svg data-v-74b0839a="" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M8.98133 1.42529C4.46641 1.42529 0.809692 4.29843 0.809692 7.88052C0.809692 10.1566 2.33954 12.1716 4.61566 13.3283L3.83208 16.2387C3.79477 16.3134 3.83208 16.4253 3.90671 16.4999C3.94402 16.5372 4.01865 16.5745 4.05596 16.5745C4.09327 16.5745 4.1679 16.5372 4.20521 16.5372L7.52611 14.2984C8.01119 14.3731 8.49626 14.4104 9.01865 14.4104C13.5336 14.4104 17.1903 11.4999 17.1903 7.95514C17.1903 4.29843 13.5336 1.42529 8.98133 1.42529Z" fill="black" />
-                      </svg>
-                    </a>
                   </div>
                 </li>
               </ul>
@@ -89,16 +82,9 @@ export default function Account({ slots = {} }) {
                         {"토스뱅크"}
                       </span>
                       <span data-v-74b0839a="" className="nmb">
-                        {"110-000-000000"}
+                        {"1002-7025-6226"}
                       </span>
                     </button>
-                  </div>
-                  <div data-v-74b0839a="" className="btn-wrap">
-                    <a data-v-74b0839a="" className="kakaopay" target="_blank" rel="noreferrer" href="https://qr.kakaopay.com/281006011000000310267128">
-                      <svg data-v-74b0839a="" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M8.98133 1.42529C4.46641 1.42529 0.809692 4.29843 0.809692 7.88052C0.809692 10.1566 2.33954 12.1716 4.61566 13.3283L3.83208 16.2387C3.79477 16.3134 3.83208 16.4253 3.90671 16.4999C3.94402 16.5372 4.01865 16.5745 4.05596 16.5745C4.09327 16.5745 4.1679 16.5372 4.20521 16.5372L7.52611 14.2984C8.01119 14.3731 8.49626 14.4104 9.01865 14.4104C13.5336 14.4104 17.1903 11.4999 17.1903 7.95514C17.1903 4.29843 13.5336 1.42529 8.98133 1.42529Z" fill="black" />
-                      </svg>
-                    </a>
                   </div>
                 </li>
               </ul>

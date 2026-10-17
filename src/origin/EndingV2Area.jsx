@@ -4,10 +4,16 @@ import { photo } from '../data/photos.js';
 export default function EndingV2Area({ slots = {} }) {
   return (
     <div data-v-0f70ab0a="" className="ending-v2-area">
-      <div data-v-a8de3cd4="" className="share-kakao-wrap">
-        <a data-v-a8de3cd4="" className="kkt-share">
-          {"카카오톡으로 초대장 보내기"}
-        </a>
+      <section data-v-57912525="" data-v-0f70ab0a="" className="ft-gowundodum light">
+        <div data-v-57912525="" className="image-wrap auto">
+          <div data-v-57912525="" className="photo-layer">
+            <img data-v-57912525="" src={`${photo('07', '?v=0')}`} alt="" loading="lazy" />
+          </div>
+          
+        </div>
+      </section>
+      <div data-v-a8de3cd4="" className="closing">
+        감사합니다.
       </div>
     </div>
   );

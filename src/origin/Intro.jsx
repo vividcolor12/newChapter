@@ -15,7 +15,15 @@ export default function Intro({ slots = {} }) {
         <div data-v-244400fe="" data-aos="fade-up" className="section-body aos-init">
           <div data-v-244400fe="" className="description-wrapper">
             <p>
-              {"우연처럼 다가온 인연이\n매일을 특별하게 만들었습니다.\n서로의 이야기를 들으며 웃고,\n함께의 내일을 꿈꾸게 되었습니다.\n\n하루하루 마음이 깊어진 끝에\n우리라는 한 편의 이야기가 시작됩니다.\n두 사람의 설레는 시작에\n소중한 분의 따뜻한 축복을 기다립니다."}
+              저희 두 사람이 부부로서<br />
+새로운 시작을 함께하게 되었습니다.<br /><br />
+결혼식은 따로 올리지 않고<br />
+조용히 부부로서의 첫걸음을 내딛고자 합니다.<br /><br />
+한 분 한 분 찾아뵙고 인사드리는 것이 도리이나,<br />
+이렇게 글로 소식을 전하게 된 점<br />
+너그러운 마음으로 이해해 주시기 바랍니다.<br /><br />
+앞으로 서로 아끼고 배려하며 잘 살아가겠습니다.<br />
+따뜻한 마음으로 축복해 주시면 감사하겠습니다.
             </p>
           </div>
         </div>
@@ -27,10 +35,10 @@ export default function Intro({ slots = {} }) {
                 <div data-v-244400fe="" className="wrap">
                   <div data-v-244400fe="" className="n_wrap">
                     <span data-v-244400fe="" className="n">
-                    {'⭐'}
+                    {'🌿'}
                     <span data-v-244400fe="" className="on">
                         <span data-v-244400fe="">
-                          {"이"}
+                          {"이희춘"}
                         </span>
                       </span>
                     </span>
@@ -67,7 +75,7 @@ export default function Intro({ slots = {} }) {
                   </div>
                   <div data-v-244400fe="" className="n_wrap">
                     <span data-v-244400fe="" className="n">
-                    {'❤️'} 
+                    {'🌿'}
                       <span data-v-244400fe="" className="on">
                         <span data-v-244400fe="">
                           {"조만행"}

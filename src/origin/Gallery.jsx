@@ -14,48 +14,66 @@ export default function Gallery({ slots = {} }) {
           </div>
         </div>
         <div data-v-71ec9210="" data-v-24d61f37="" className="gallLayerWrapper aos-init" data-aos="fade-up">
-          <div data-v-71ec9210="" className="gallGridWrapper twoRow ratio multiple">
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('mRXE6cy9D1', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('mRXE6cy9D1', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+          <div data-v-71ec9210="" className="gallGridWrapper ratio multiple">
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('01', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('01', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('uoROFzOsTT', '?f=webp&w=500&cw=500&ch=500&cl=0&ct=0&f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('uoROFzOsTT', '?f=webp&w=500&cw=500&ch=500&cl=0&ct=0&f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ backgroundImage: `url("${photo('07', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('07', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('GSCWyFMnxv', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('GSCWyFMnxv', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('04', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('04', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="false" style={{ backgroundImage: `url("${photo('dOQT7LerCJ', '?f=webp&w=500&cw=500&ch=312&cl=0&ct=177&f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('dOQT7LerCJ', '?f=webp&w=500&cw=500&ch=312&cl=0&ct=177&f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('10', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('10', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('kYLpP444zT', '?f=webp&w=500&cw=500&ch=500&cl=0&ct=166&f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('kYLpP444zT', '?f=webp&w=500&cw=500&ch=500&cl=0&ct=166&f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('02', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('02', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('eXlFWiyhnn', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('eXlFWiyhnn', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('03', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('03', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('l1RNEDwHZz', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('l1RNEDwHZz', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('06', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('06', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('5h4Yk5Kx4l', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('5h4Yk5Kx4l', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('12', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('12', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('3GKEVh4Sbl', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('3GKEVh4Sbl', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('08', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('08', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('RYGkCtMtSk', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('RYGkCtMtSk', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('05', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('05', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('cA3DIg46kw', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('cA3DIg46kw', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2",backgroundImage: `url("${photo('11', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('11', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('OVAvqns4nX', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('OVAvqns4nX', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('14', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('14', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('NGkpHR24wP', '?f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('NGkpHR24wP', '?f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('13', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('13', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
-            <div data-v-71ec9210="" className="item" data-is-span="false" style={{ backgroundImage: `url("${photo('IcUPCg5PRX', '?f=webp&w=500&cw=500&ch=312&cl=0&ct=153&f=webp&w=450')}")` }}>
-              <img data-v-71ec9210="" src={`${photo('IcUPCg5PRX', '?f=webp&w=500&cw=500&ch=312&cl=0&ct=153&f=webp&w=450')}`} alt="" style={{ display: "none" }} />
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{  backgroundImage: `url("${photo('09', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('09', '?v=0')}`} alt="" style={{ display: "none" }} />
+            </div>
+            <div data-v-71ec9210="" className="item" data-is-span="false" style={{ gridArea: "span 2", backgroundImage: `url("${photo('15', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('15', '?v=0')}`} alt="" style={{ display: "none" }} />
+            </div>
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('20', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('20', '?v=0')}`} alt="" style={{ display: "none" }} />
+            </div>
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ backgroundImage: `url("${photo('17', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('17', '?v=0')}`} alt="" style={{ display: "none" }} />
+            </div>
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('16', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('16', '?v=0')}`} alt="" style={{ display: "none" }} />
+            </div>
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ gridArea: "span 2", backgroundImage: `url("${photo('18', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('18', '?v=0')}`} alt="" style={{ display: "none" }} />
+            </div>
+            <div data-v-71ec9210="" className="item" data-is-span="true" style={{ backgroundImage: `url("${photo('19', '?v=0')}")` }}>
+              <img data-v-71ec9210="" src={`${photo('19', '?v=0')}`} alt="" style={{ display: "none" }} />
             </div>
           </div>
         </div>

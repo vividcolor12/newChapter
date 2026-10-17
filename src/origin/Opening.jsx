@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import { photo } from '../data/photos.js';
 
-const LOTTIE = '/assets/opening/v2.json';
+const LOTTIE = `${import.meta.env.BASE_URL}assets/opening/v2.json`;
 
 export default function Opening({ onDone }) {
   const textRef = useRef(null);
@@ -28,12 +28,12 @@ export default function Opening({ onDone }) {
     <div data-v-4d187d36="" data-v-6faeaaac="" className="container overlay-color-purple keys" style={{ display: 'block', background: 'transparent' }}>
       <div data-v-4d187d36="" className="opening_bg">
         <div data-v-4d187d36="" className="bg_div">
-          <div data-v-4d187d36="" className="overlay-div" />
-          <img data-v-4d187d36="" className="img_02" src={photo('MPMwdMvauB', '?f=webp&w=1280')} alt="" />
-          <img data-v-4d187d36="" className="img_01" src={photo('vFjGssjYrw', '?f=webp&w=1280')} alt="" />
+          <div data-v-4d187d36="" className="overlay-div"></div>
+          <img data-v-4d187d36="" className="img_01" src={photo('16', '?f=webp&w=1280')} alt="" />
+          <img data-v-4d187d36="" className="img_02" src={photo('04', '?f=webp&w=1280')} alt="" />
         </div>
       </div>
-      <div data-v-4d187d36="" className="opening_text" ref={textRef} />
+      <div data-v-4d187d36="" className="opening_text" ref={textRef}></div>
     </div>
   );
 }
