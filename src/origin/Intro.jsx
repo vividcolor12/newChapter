@@ -1,4 +1,17 @@
-export default function Intro({ showFooter = true }) {
+import { Fragment } from 'react';
+
+// ['첫 줄', '', '다음 문단'] -> 줄마다 <br /> 로 이어 붙입니다. 빈 문자열은 빈 줄이 됩니다.
+function Lines({ lines }) {
+  return lines.map((line, i) => (
+    <Fragment key={i}>
+      {line}
+      {i < lines.length - 1 ? <br /> : null}
+    </Fragment>
+  ));
+}
+
+// text: { title: string[], body: string[] } — src/data/intro.js 참고
+export default function Intro({ text, showFooter = true }) {
   return (
     <div data-v-0f70ab0a="" id="section-intro">
       <section data-v-244400fe="" data-v-0f70ab0a="" className="ft-gowundodum">
@@ -7,20 +20,13 @@ export default function Intro({ showFooter = true }) {
             {"MESSAGE"}
           </div>
           <div data-v-58a15c77="" data-v-81934de8="" className="ko_title theme_emp_color_purple ft-gowundodum">
-          저희 두 사람이 부부로서<br />
-          새로운 시작을 함께하게 되었습니다.
+            <Lines lines={text.title} />
           </div>
         </div>
         <div data-v-244400fe="" data-aos="fade-up" className="section-body aos-init">
           <div data-v-244400fe="" className="description-wrapper">
             <p>
-              결혼식은 따로 올리지 않고<br />
-              조용히 부부로서의 첫걸음을 내딛고자 합니다.<br /><br />
-              한 분 한 분 찾아뵙고 인사드리는 것이 도리이나,<br />
-              이렇게 글로 소식을 전하게 된 점<br />
-              너그러운 마음으로 이해해 주시기 바랍니다.<br /><br />
-              앞으로 서로 아끼고 배려하며 잘 살아가겠습니다.<br />
-              따뜻한 마음으로 축복해 주시면 감사하겠습니다.
+              <Lines lines={text.body} />
             </p>
           </div>
         </div>
